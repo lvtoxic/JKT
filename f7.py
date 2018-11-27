@@ -18,8 +18,6 @@ class F7(unittest.TestCase):
     def test_002(self):
         pass
 
-
-
 if __name__ == '__main__':
     suite = unittest.TestSuite(unittest.makeSuite(F7))
     unittest.TextTestRunner(verbosity=2).run(suite)
