@@ -14,15 +14,20 @@ class BaiduLink(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
-    def test_baidu_news(self):
-        '''首页:点击新闻是否可以正常跳转'''
-        self.driver.find_element_by_link_text('新闻').click()
-        self.assertEqual(self.driver.current_url, 'http://news.baidu.com/')
+    def test_baidu_so_enabled(self):
+        '''首页:百度搜索输入框编辑'''
+        so = self.driver.find_element_by_id('kw')
+        self.assertTrue(so.is_enabled())
 
-    def test_baidu_maps(self):
-        '''首页:点击地图是否可以正常跳转'''
-        self.driver.find_element_by_link_text('地图').click()
-        self.assertEqual(self.driver.current_url, 'https://map.baidu.com/')
+    # def test_baidu_so(self):
+    #     '''首页:测试搜索功能'''
+    #     so = self.driver.find_element_by_id('kw')
+    #     so.send_keys('webdriver')
+    #     self.driver.find_element_by_id('su').click()
+    #     self.assertEqual(so.get_attribute('value'), 'webdriver')
+
+
+
 
 
 if __name__ == '__main__':
