@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DataDriven>
+    <yan>罗伯特</yan>
+    <admin>管理员</admin>
+    <wa nick="巴乔" age="20" sex="boy"></wa>
+</DataDriven>
